@@ -59,6 +59,14 @@
     \item The \textbg{client} asks the server for the final result over the \textbg{result service}.
   \end{enumerate}
 \end{frame}
+\begin{frame}{ROS 2 actions}{CLI introspection tools}
+  The main command is \texttt{ros2 action} with the following verbs:
+  \begin{itemize}
+    \item \texttt{list} Lists all active actions.
+    \item \texttt{info} Prints information about an action.
+    \item \texttt{send\_goal} Sends a goal request to an action server, and prints the result; with \texttt{-f} prints also feedback messages.
+  \end{itemize}
+\end{frame}
 \begin{frame}{ROS 2 actions}{Coding hints for servers and clients}
   \begin{block}{Servers}
     Goal requests are handled with \textbf{callbacks}, while computations can be handled freely (usually in \textbf{separate threads}). When done, the goal must be marked as \textbf{succeeded} or \textbf{aborted}.
@@ -97,4 +105,5 @@ int32[] partial_sequence\end{lstlisting}
     \centering
     Now go have a look at the \href{https://github.com/IntelligentSystemsLabUTV/ros2-examples/tree/humble/src/cpp/actions_example_cpp}{\color{blue}\underline{\texttt{ros2-examples/src/cpp/actions\_example\_cpp}}} package!
   \end{block}
+  If you're curious, the \href{https://github.com/IntelligentSystemsLabUTV/ros2-examples/tree/humble/src/cpp/advanced/complete_actions_cpp}{\color{blue}\underline{\texttt{ros2-examples/src/cpp/advanced/complete\_actions\_cpp}}} package, which implements the complete goal state machine using a multithreaded executor.
 \end{frame}

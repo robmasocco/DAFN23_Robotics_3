@@ -26,6 +26,15 @@
     \item If waiting, the \textbg{client} awakes when receiving the reponse.
   \end{enumerate}
 \end{frame}
+\begin{frame}{ROS 2 services}{CLI introspection tools}
+  The main command is \texttt{ros2 service} with the following verbs:
+  \begin{itemize}
+    \item \texttt{list} Lists all active services.
+    \item \texttt{type} Prints the service type.
+    \item \texttt{find} Lists active services of the given type.
+    \item \texttt{call} Calls the service with the request defined in the command line.
+  \end{itemize}
+\end{frame}
 \begin{frame}{ROS 2 services}{Coding hints for servers and clients}
   \begin{block}{Servers}
     Similarly to topic subscriptions, requests are processed in appropriate \textbf{callbacks}, taking \textbf{two arguments}, in which responses are also populated. The server object is as well only needed to instantiate the service.
