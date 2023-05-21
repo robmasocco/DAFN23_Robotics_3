@@ -1,22 +1,22 @@
-% DAFN - ROS 2 - Lecture 2: Advanced Communication
+% DAFN23 - Robotics - Lecture 3
 % Roberto Masocco <roberto.masocco@uniroma2.it>
-% April 21, 2022
+% May 24, 2023
 
-\documentclass{beamer}
+\documentclass[aspectratio=169]{beamer}
 
 % Slides layout
 \usepackage[
-    title={Robot Operating System 2},
-    subtitle={Lecture 2: Advanced Communication},
+    title={ROS 2},
+    subtitle={Advanced communication},
     event={DAFN},
     author={Roberto Masocco},
     longauthor={Roberto Masocco},
     email={roberto.masocco@uniroma2.it},
     institute={Tor Vergata},
-    longinstitute={University of Rome "Tor Vergata"},
+    longinstitute={University of Rome Tor Vergata},
     department={Department of Civil Engineering and Computer Science Engineering},
-    researchgroup={Intelligent Systems Lab},
-    date={April 28, 2022}
+    researchgroup={},
+    date={May 24, 2023}
 ]{utvengbeamer}
 
 % Code listings settings
@@ -67,9 +67,12 @@
 \end{frame}
 
 % --- Section 1 ---
-\input{sections/1_services}
+\input{sections/asyncio}
 
 % --- Section 2 ---
-\input{sections/2_actions}
+\input{sections/services}
+
+% --- Section 3 ---
+\input{sections/actions}
 
 \end{document}
