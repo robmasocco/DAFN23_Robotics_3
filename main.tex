@@ -62,8 +62,8 @@
 
 % --- Table of contents ---
 \begin{frame}
-\frametitle{Roadmap}
-\tableofcontents
+	\frametitle{Roadmap}
+	\tableofcontents
 \end{frame}
 
 % --- Section 1 ---
@@ -77,12 +77,21 @@
 
 % --- Exercises ---
 \begin{frame}{Exercises}
-  \begin{itemize}
-    \item Run the service client and server examples, and try to call the service from the command line.
-    \item Create two new packages for server and client nodes, and for a custom service definition named \texttt{CapString.srv}; the server should take a string as input and return two strings: the same string fully capitalized, and the number of characters in the string.
-    \item Run the action client and server examples, and try to call the action from the command line.
-    \item Modify the server computation routine to be recursive, but keeping the same functionalities of this implementation (\emph{e.g.}, the feedbacks publishing).
-  \end{itemize}
+	\begin{itemize}
+		\item Run the service client and server examples, and try to call the service from the command line.
+		\item Create two new packages for server and client nodes, and for a custom service definition named \texttt{CapString.srv}; the server should take a string as input and return two strings: the same string fully capitalized, and the number of characters in the string.
+	\end{itemize}
+\end{frame}
+\begin{frame}{Exercises}
+	\begin{itemize}
+		\item Run the action client and server examples, and try to call the action from the command line.
+		\item Modify the feedback message: instead of a partial sequence, it should publish the length of the sequence so far; this requires:
+		      \begin{enumerate}
+			      \item modifying the action definition in \texttt{ros2\_examples\_interfaces};
+			      \item modifying the server node to publish the length of the sequence instead of the partial sequence in the feedback message (hint: use methods of the \texttt{std::vector} class to get the length of the partial sequence in one go);
+			      \item modifying the feedback callback in the client to parse and print the length from the feedback message.
+		      \end{enumerate}
+	\end{itemize}
 \end{frame}
 
 \end{document}
